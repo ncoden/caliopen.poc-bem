@@ -1,0 +1,36 @@
+// MOCK (not real avatar)
+
+$m-avatar__size--small: 2rem;
+$m-avatar__size--medium: 3rem;
+$m-avatar__size--large: 4rem;
+$m-avatar__size--xlarge: 6rem;
+
+@mixin m-avatar--size($size) {
+  width: $size;
+  height: $size;
+}
+
+.m-avatar {
+  display: inline-block;
+  vertical-align: middle;
+
+  background-color: $co-color__primary;
+  border-radius: 2px;
+
+  // default
+  @include m-avatar--size($m-avatar__size--medium);
+
+  // modifiers
+  &--small {
+    @include m-avatar--size($m-avatar__size--small);
+  }
+  &--medium {
+    @include m-avatar--size($m-avatar__size--medium);
+  }
+  &--large {
+    @include m-avatar--size($m-avatar__size--large);
+  }
+  &--xlarge {
+    @include m-avatar--size($m-avatar__size--xlarge);
+  }
+}

@@ -1,0 +1,9 @@
+.l-body {
+  padding: 0 $co-margin;
+
+  &__content {
+    padding-top: $co-margin * 1.5;
+
+    background: $co-color__fg__back;
+  }
+}

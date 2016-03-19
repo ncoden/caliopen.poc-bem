@@ -1,0 +1,27 @@
+$header__height: 50px;
+
+.l-header {
+  height: $header__height;
+  margin-bottom: $co-margin;
+
+  &__wrapper {
+    @extend %title-bar;
+
+    position: fixed;
+    width: 100%;
+    padding: 0 $co-margin;
+
+    background-color: $co-color__fg__back;
+  }
+
+  &__title {
+    float: left;
+    margin-right: $co-margin;
+
+    color: $co-color__bg__text;
+  }
+
+  &__menu {
+    float: left;
+  }
+}

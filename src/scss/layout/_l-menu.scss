@@ -1,0 +1,15 @@
+.l-menu {
+  @extend %menu-bar;
+
+  text-decoration: none;
+
+  @include menu-bar-style(
+    $background:        $co-color__fg__back,
+    $background-hover:  $co-color__primary,
+    $background-active: $co-color__primary--lower,
+    $color:             $co-color__fg__text--low,
+    $color-hover:       $co-color__fg__text--high,
+    $color-active:      $co-color__fg__text--higher,
+    $autocolor: false
+  );
+}

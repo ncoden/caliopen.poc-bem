@@ -1,0 +1,31 @@
+{
+  "name": "caliopen.poc-bourbon",
+  "version": "1.0.0",
+  "description": "POC Bourbon for Caliopen angular web client",
+  "main": "index.html",
+  "scripts": {
+    "build": "gulp",
+    "dev": "gulp build watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ncoden/caliopen.poc-bourbon.git"
+  },
+  "author": "Nicolas Coden <ncoden@student.42.fr>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ncoden/caliopen.poc-bourbon/issues"
+  },
+  "homepage": "https://github.com/ncoden/caliopen.poc-bourbon#readme",
+  "devDependencies": {
+    "del": "^2.2.0",
+    "foundation-apps": "^1.2.0",
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-sequence": "^0.4.5",
+    "path-parse": "^1.0.5"
+  }
+}

@@ -1,0 +1,36 @@
+@mixin m-contact-card--inline {
+  &__avatar {
+    float: left;
+    margin-right: $co-margin;
+  }
+
+  &__title {
+    display: inline-block;
+  }
+}
+
+@mixin m-contact-card--break {
+  &__avatar {
+    float: none;
+    margin-right: 0;
+  }
+
+  &__title {
+    display: block;
+  }
+}
+
+.m-contact-card {
+  @include m-contact-card--inline;
+
+  &__title {
+    color: $co-color__fg__text--high;
+  }
+
+  &--inline {
+    @include m-contact-card--inline;
+  }
+  &--break {
+    @include m-contact-card--break;
+  }
+}
