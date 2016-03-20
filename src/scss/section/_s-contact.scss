@@ -1,48 +1,40 @@
 .s-contact {
-  @include grid-block ($wrap: true);
-
+  @include grid-block($wrap: true);
   background-color: $co-color__fg__back--low;
 
   &__datas-irl {
     @include grid-content(12);
-
     padding: $co-margin;
+    padding-top: 0;
     background-color: $co-color__fg__back;
-
-    .m-avatar {
-      @include m-avatar--size($m-avatar__size--large);
-    }
   }
 
   &__datas-online {
     @include grid-content(12);
-
     padding: $co-margin;
   }
 
-  &__message-btn {
+  &__m-contact-card {
+    @include m-contact-card--size(large);
+  }
+
+  &__message-button {
     margin: 0;
   }
 
   @include breakpoint(medium) {
     &__datas-irl {
       @include grid-size(5);
-
       text-align: center;
-
-      .m-contact-card {
-        @include m-contact-card--break;
-
-        width: 100%;
-      }
-
-      .m-avatar {
-        @include m-avatar--size($m-avatar__size--xlarge);
-      }
     }
 
     &__datas-online {
       @include grid-size(7);
+    }
+
+    &__m-contact-card {
+      @include m-contact-card--break;
+      @include m-contact-card--size(xlarge);
     }
   }
 }

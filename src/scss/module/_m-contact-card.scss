@@ -1,14 +1,20 @@
 @mixin m-contact-card--inline {
-  &__avatar {
+  .m-contact-card__m-avatar {
     float: left;
     margin-right: $co-margin;
   }
 }
 
 @mixin m-contact-card--break {
-  &__avatar {
+  .m-contact-card__m-avatar {
     float: none;
     margin-right: 0;
+  }
+}
+
+@mixin m-contact-card--size($size) {
+  .m-contact-card__m-avatar {
+    @include m-avatar--size($size);
   }
 }
 
