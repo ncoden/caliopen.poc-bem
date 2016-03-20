@@ -3,10 +3,6 @@
     float: left;
     margin-right: $co-margin;
   }
-
-  &__title {
-    display: inline-block;
-  }
 }
 
 @mixin m-contact-card--break {
@@ -14,16 +10,14 @@
     float: none;
     margin-right: 0;
   }
-
-  &__title {
-    display: block;
-  }
 }
 
 .m-contact-card {
   @include m-contact-card--inline;
 
   &__title {
+    display: block;
+
     color: $co-color__fg__text--high;
   }
 

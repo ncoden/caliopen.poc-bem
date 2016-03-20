@@ -1,13 +1,10 @@
 .s-contact {
-  @include grid-block (
-    $wrap: true
-  );
+  @include grid-block ($wrap: true);
 
   background-color: $co-color__fg__back--low;
 
   &__datas-irl {
-    @include grid-block(12);
-    @include grid-wrap(true);
+    @include grid-content(12);
 
     padding: $co-margin;
     background-color: $co-color__fg__back;
@@ -15,8 +12,20 @@
     .m-avatar {
       @include m-avatar--size($m-avatar__size--large);
     }
+  }
 
-    @include breakpoint(medium) {
+  &__datas-online {
+    @include grid-content(12);
+
+    padding: $co-margin;
+  }
+
+  &__message-btn {
+    margin: 0;
+  }
+
+  @include breakpoint(medium) {
+    &__datas-irl {
       @include grid-size(5);
 
       text-align: center;
@@ -31,15 +40,8 @@
         @include m-avatar--size($m-avatar__size--xlarge);
       }
     }
-  }
 
-  &__datas-online {
-    @include grid-block(12);
-    @include grid-wrap(true);
-
-    padding: $co-margin;
-
-    @include breakpoint(medium) {
+    &__datas-online {
       @include grid-size(7);
     }
   }
