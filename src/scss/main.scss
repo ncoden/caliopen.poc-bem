@@ -5,11 +5,13 @@
 @import "base/foundation";
 
 // vendors
+@import "vendor/font-awesome";
 @import "vendor/foundation";
 
 // modules (alias components)
 @import "module/m-avatar";
 @import "module/m-contact-card";
+@import "module/m-list";
 @import "module/m-subtitle";
 
 // layout

@@ -21,7 +21,12 @@ var config = {
 
   scssVendorsNamespace: 'vendor',
   scssVendors: [
+    './node_modules/font-awesome/scss/**/*.scss',
     './node_modules/foundation-apps/scss/**/*.scss',
+  ],
+  assetsVendorsNamespace: '',
+  assetsVendors: [
+    './node_modules/font-awesome/@(fonts)/**/*',
   ],
 
   cssDestFile: 'dist/css/main.css',
@@ -59,7 +64,14 @@ var onError = function (err) {
 var runTimestamp = Math.round(Date.now()/1000);
 
 // Build
-gulp.task('build:assets', function() {
+gulp.task('build:assets', function(cb) {
+  gulpSequence(['build:assetsVendors', 'build:assetsIndex'], cb);
+});
+gulp.task('build:assetsVendors', function() {
+  return gulp.src(config.assetsVendors)
+    .pipe(gulp.dest(config.assetsDest + '/' + config.assetsVendorsNamespace));
+});
+gulp.task('build:assetsIndex', function() {
   return gulp.src(config.htmlMain)
     .pipe(gulp.dest(config.destDirectory));
 });
